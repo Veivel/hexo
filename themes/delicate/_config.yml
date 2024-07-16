@@ -8,7 +8,7 @@ color: "#A72CC9"
 # 页面slogan
 poem: "Poem Here?"
 # email 地址
-email: -
+email: "-"
 # archive line color
 archiveLineColor: "#dedede"
 # tags color
