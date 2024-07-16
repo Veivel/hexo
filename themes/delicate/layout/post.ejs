@@ -1,0 +1,114 @@
+<aside class="toc-container">
+    <!-- sticky toc -->
+    <%- toc(page.content) %>
+</aside>
+
+<article class="markdown-container">
+    <section>
+        <a href="/" class="back-button">Back</a>
+        <h1>
+            <span>
+                <%- page.title %>
+            </span>
+        
+            <div class="post-info">
+                <span class="post-title"><%- page.author ? page.author + ' |' : "" %></span>
+                <span>
+                    <%- Math.round(page.content.split(' ').length / 175) + ' minute-read • '  %>
+                    <%- page.content.split(' ').length + ' words'  %>
+                </span>
+            </div>
+        </h1>
+    </section>
+
+    <section class="article">
+        <%- page.content %>
+    </section>
+
+    <section class="post-cc" style="gap: 0.5em;">
+        <div class="post-cc-author" style="display:flex; gap:inherit;">
+            <span class="bold">Author: </span><%- mail_to(theme.email, config.author) %>
+        </div>
+        <div class="post-cc-link" style="display:flex; gap:inherit;">
+            <span class="bold">URL:</span><a href="<%- url_for(page.path) %>"><%- decodeURIComponent(page.permalink) %></a>
+        </div>
+        <div class="post-cc-source" style="display:flex; gap:inherit;">
+            <span class="bold">Homepage: </span><a href="<%- url_for('/') %>"><%- config.title %></a>
+        </div>
+        <div class="ppost-cc-declare" style="display:flex; gap:inherit;">
+            <span class="bold">License: </span><a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+        </div>
+    </section>
+
+    <% if (page.tags.length > 0) { %>
+        <section class="post-tag">
+            <a href="<%- url_for('tags') %>"><i class="fa fa-tags"></i></a>
+            <% for (tag of page.tags.data) { %>
+                <a href="<%- url_for(tag.path) %>" class="tag-item">
+                    <%- tag.name %>
+                </a>
+            <% } %>
+        </section>
+    <% } %>
+    <% if (page.categories.length > 0) { %>
+        <section class="post-cate">
+            <!-- <a href="<%- url_for('categories') %>"><i class="fa fa-inbox"></i></a> -->
+            <% for (cate of page.categories.data) { %>
+                <a href="<%- url_for(cate.path) %>" class="cate-item">
+                    <%- cate.name %>
+                </a>
+            <% } %>
+        </section>
+    <% } %>
+
+    <section class="flex-between" style="margin: 20px 0;">
+        <div class="pre">
+            <% if (page.prev){ %>
+                <a href="<%- url_for(page.prev.path) %>" class="change-link">
+                    <span class="icon"><i class="fa fa-angle-double-left"></i></span>
+                    <span class="text">
+                        <span class="identify">Previous Article</span>
+                        <span class="text-title"><%- page.prev.title %></span>
+                    </span>
+                </a>
+            <% } %>
+        </div>
+        <div class="next">
+            <% if (page.next){ %>
+                <a href="<%- url_for(page.next.path) %>" class="change-link">
+                    <span class="text">
+                        <span class="identify" style="text-align: right;">Next Article</span>
+                        <span class="text-title" style="text-align: right;"><%- page.next.title %></span>
+                    </span>
+                    <span class="icon"><i class="fa fa-angle-double-right"></i></span>
+                </a>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- comment -->
+    <section class="comment-container">
+        <!-- giscus -->
+        <% if (page.giscus) { %>
+            <script src="<%- theme.giscus.js %>"
+                data-repo="<%- theme.giscus.repo %>"
+                data-repo-id="<%- theme.giscus.repoId %>"
+                data-category="<%- theme.giscus.category %>"
+                data-category-id="<%- theme.giscus.categoryId %>"
+                data-mapping="<%- theme.giscus.mapping %>"
+                data-strict="<%- theme.giscus.strict %>"
+                data-reactions-enabled="<%- theme.giscus.reactionsEnabled %>"
+                data-emit-metadata="<%- theme.giscus.emitMetadata %>"
+                data-input-position="<%- theme.giscus.inputPosition %>"
+                data-theme="<%- theme.giscus.selfTheme ? theme.giscus.theme : 'https://cdn.jsdelivr.net/gh/can-dy-jack/giscus-theme-delicate@master/index.min.css' %>"
+                data-lang="<%- theme.giscus.lang %>"
+                data-loading="<%- theme.giscus.loading %>"
+                crossorigin="anonymous"
+                async>
+            </script>
+        <% } %>
+    </section>
+</article>
+
+
+
