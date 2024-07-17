@@ -1,6 +1,16 @@
+<section 
+    class="page-top-badge flex-between w100 banner" 
+    style='background-image: url("<%- page.thumbnail %>");'
+>   
+    <!-- <div>
+        <a href='<%- url_for("/") %>'>
+            <span title="github"><i class="fa fa-home" aria-hidden="true"></i></span>
+        </a>
+        <a href="/" class="back-button">Back</a>
+    </div> -->
+</section>
 <article class="markdown-container">
     <section>
-        <a href="/" class="back-button">Back</a>
         <h1>
             <span>
                 <%- page.title %>
@@ -13,6 +23,10 @@
                     <%- page.content.split(' ').length + ' words'  %>
                 </span>
             </div>
+
+            <!-- <img
+                src="<%- page.thumbnail %>"
+            /> -->
         </h1>
     </section>
 
@@ -60,7 +74,7 @@
         </section>
     <% } %>
 
-    <section class="flex-between" style="margin: 20px 0;">
+    <section class="flex-between" style="margin: 0 0;">
         <div class="pre">
             <% if (page.prev){ %>
                 <a href="<%- url_for(page.prev.path) %>" class="change-link">

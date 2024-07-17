@@ -24,7 +24,7 @@ imgURL: imgs/beach.jpg
 index:
   links: 
     archive: /archives/
-    tags: /tags/
+    # tags: /tags/
     categories: /categories/
     website: https://veivelp.com
 

@@ -10,14 +10,25 @@
 
     <meta name="color-scheme" content="light dark">
 
+    <meta property="og:title" content='<%- config.title + (page.title ? (" | " + page.title) : "") %>' />
+    <meta property="og:description" content="<%= config.description %>" />
+    <meta property="og:url" content="https://blog.veivelp.com" />
+    <meta property="og:site_name" content="<%= config.title %>" />
+    <meta property="og:image" content="<%= page.thumbnail %>">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content='<%- config.title + (page.title ? (" | " + page.title) : "") %>'>
+    <meta name="twitter:description" content="<%= config.description %>">
+    <meta name="twitter:creator" content="<%= config.author %>">
+    <meta name="twitter:image" content="<%= page.thumbnail %>">
+
     <%# style %>
     <%- css('styles/index.css') %>
     <%# favicon %>
     <%- favicon_tag('imgs/logo.png') %>
 
+    <link rel="stylesheet" href="/assets/fa/font-awesome.css">
     <%# CDN %>
-    <link rel="stylesheet" href="<%- theme.CDN.fontawesome %>">
-    <%# 代码高亮 %>
     <% if (config.highlight.enable) { %>
         <link rel="stylesheet" href="<%- theme.CDN.highlight %>">
     <% } else if (config.prismjs.enable) { %>

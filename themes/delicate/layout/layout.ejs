@@ -7,16 +7,9 @@
 <body id="delicate-app">
     <main>
         <div class="container">
-            <section class="page-top-badge flex-between w100">
-                <div>
-                    <a href="<%- url_for("/") %>">
-                        <span title="github"><i class="fa fa-home" aria-hidden="true"></i></span>
-                    </a>
-                </div>
-                <!-- <div>
-                    <%# partial("component/switchModeBtn") %>
-                </div> -->
-            </section>
+            <a href='/' class="back-button">
+                <span title="github"><i class="fa fa-home" aria-hidden="true"></i></span>
+            </a>
             <%- body %>
             <section class="article-bottom flex-between">
                 <div class="flex-center">
@@ -25,9 +18,14 @@
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </span>
                     </a>
-                    <a href="<%- theme.github %>">
+                    <a href="https://github.com/Veivel/hexo">
                         <span title="github" style="font-size: 18px;">
                             <i class="fa fa-github" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a href="https://linkedin.com/in/veivel">
+                        <span title="linkedin" style="font-size: 18px;">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </span>
                     </a>
                 </div>

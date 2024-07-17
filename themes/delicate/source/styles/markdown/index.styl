@@ -4,6 +4,7 @@
 
 .markdown-container
     margin 10px 50px
+    z-index 20
     h1
         text-align center
         font-size 1.8rem
@@ -11,8 +12,16 @@
             font-weight 900
 .back-button
     margin-block 0px
+    position absolute
+    top 16px
+    left 16px
+    background white
+    padding-inline 6px
+    border-radius 3px
+    border 1px solid gray
 .back-button:hover 
     cursor pointer
+    text-decoration underline
 hr
     box-sizing content-box
     overflow hidden
