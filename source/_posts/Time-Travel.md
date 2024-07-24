@@ -3,6 +3,7 @@ title: Time Travel
 date: 2023-07-30 18:38
 tags:
 categories: philosophy
+thumbnail: /assets/thumbnails/timetravel.jpg
 ---
 
 If future me walked through a portal and told me, "You can travel to the past ONCE, Veivel, to any point of your choosing in your past, to change the past and consequently your life," I'd shoot him in the head. Metaphorically. Unless I had a gun, in which case, literally.

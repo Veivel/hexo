@@ -4,6 +4,7 @@ date: 2024-07-03 21:11:58
 tags:
 categories: philosophy
 published: true
+thumbnail: /assets/thumbnails/hourglass.jpg
 ---
 
 ### As long as there is love, there will be grief.

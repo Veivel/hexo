@@ -12,48 +12,43 @@
         <% } %>
     </nav>
 </header>
-<div class="head-img">
+<!-- <div class="head-img">
     <%- image_tag('imgs/beach.jpg') %>
-</div>
+</div> -->
 <article class="index-article">
+    <!-- <h1>Articles</h1> -->
+     <hr/>
     <div class="article-list">
         <% for (idx in page.posts.data) { %>
             <% let post = page.posts.data[idx] %>
             <% if(idx > 0) { %>
-                <hr>
+                <!-- <hr> -->
             <% } %>
             <div class="article-item"> 
                 <div class="article-item-title">
-                    <h1>
+                    <h2>
                         <a href="<%- url_for(post.path) %>">
                             <%= post.title %>
                         </a>
-                    </h1>
-                    <div class="info">
-                        <% if (post.author) { %>
-                            <span>
-                                <%= post.author %> | 
-                            </span>
-                        <% } %>
+                    </h2>
+                    <p class="date">
                         <% if (post.date) { %>
-                            <span>
-                                <%= post.date.format("YYYY/MM/DD") %>
-                            </span>
+                            <%= post.date.format("YYYY/MM/DD") %>
                         <% } %>
-                    </div>
+                    </p>
                 </div>
-                <div class="article-item-excerpt article">
+                <!-- <div class="article-item-excerpt article">
                     <div>
                         <%- post.excerpt || post.content %>
                     </div>
-                </div>
+                </div> -->
             </div>
 
-            <div style="text-align: right;">
+            <!-- <div style="text-align: right;">
                 <button type="button" class="read-more">
                     <a href="<%- url_for(post.path) %>">Link to Article</a>
                 </button>
-            </div>
+            </div> -->
         <% } %>
     </div>
 
