@@ -74,5 +74,4 @@ function updateProgress(progress) {
 
 window.delicate = delicate;
 
-// 初始化
 delicate.init();
