@@ -1127,10 +1127,10 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-posthog-js@^1.161.2:
-  version "1.161.2"
-  resolved "https://registry.yarnpkg.com/posthog-js/-/posthog-js-1.161.2.tgz#a3cd656777a27c5edb0e7362fdaf088fad48e052"
-  integrity sha512-2tgGFQm5c1BWY2nXP5xtvWl90EUyVsvaX0pxPYR6a0nP7XkgnhlIGPwxizeP41n/xQYmN3ZCLf8trjxJ8JRPKQ==
+posthog-js@^1.161.6:
+  version "1.161.6"
+  resolved "https://registry.yarnpkg.com/posthog-js/-/posthog-js-1.161.6.tgz#fdb883abfe63d7d68f729aad0695b3dc52407820"
+  integrity sha512-UO0z/YTuan55Kl5Yg9Xs5x1PKUkm2zGKUNPioznb4GLRcxFnLBkWoeKQXNro2YZsYJvK+MY8jlF3cdGa8BZ8/Q==
   dependencies:
     fflate "^0.4.8"
     preact "^10.19.3"
